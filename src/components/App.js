@@ -12,7 +12,6 @@ const tabs = [
 const App = () => {
   return (
     <div>
-    <div>Hello</div>
       <Tab tabs={tabs}/>
     </div>
   )
