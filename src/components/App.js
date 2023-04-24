@@ -1,24 +1,21 @@
 
 import React from "react";
 import './../styles/App.css';
-import { useState } from "react";
+import Tab from "./Tab";
 
-const tabs = [{Tab1:"This is the content for Tab1"},
-{Tab2:"This is the content for Tab2"},
-{Tab3:"This is the content for Tab3"}];
+const tabs = [
+  { title: "Tab 1", content: "This is the content for Tab 1." },
+  { title: "Tab 2", content: "This is the content for Tab 2." },
+  { title: "Tab 3", content: "This is the content for Tab 3." }
+];
 
 const App = () => {
-  const [value, setvalue] = useState("");
   return (
     <div>
-        <ul>
-          <li onClick={()=>{setvalue(tabs[0].Tab1)}}>Tab 1</li>
-          <li onClick={()=>{setvalue(tabs[1].Tab2)}}>Tab 2</li>
-          <li onClick={()=>{setvalue(tabs[2].Tab3)}}>Tab 3</li>
-        </ul>
-        <div>{value}</div>
+    <div>Hello</div>
+      <Tab tabs={tabs}/>
     </div>
   )
 }
 
-export default App
+export default App;
